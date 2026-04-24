@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mia's Bite Delight</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>Mia's bite delight</header>
+
+    <div class="kiosk-layout">
+        <!-- Left Sidebar -->
+        <nav class="sidebar">
+            <ul id="categories-list">
+                <!-- Categories -->
+            </ul>
+            <div class="sidebar-footer">
+                <div id="mini-total">Total: 0.00 £</div>
+            </div>
+        </nav>
+
+        <!-- Middle part -->
+        <main class="menu-area">
+            <div id="products-grid" class="products-grid">
+            </div>
+        </main>
+
+        <!-- Right side -->
+        <aside class="order-sidebar">
+            <h3>Your Order</h3>
+            <div id="order-summary" class="order-list">
+                <p class="empty-msg">Your cart is empty</p>
+            </div>
+            <button class="pay-btn" data-bs-toggle="modal" data-bs-target="#billModal">PAY</button>
+        </aside>
+    </div>
+
+    <!-- Bill -->
+    <div class="modal fade" id="billModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5>Your Bill</h5>
+                </div>
+                <div class="modal-body">
+                    <div id="bill-items"></div>
+                    <hr>
+                    <div class="d-flex justify-content-between fw-bold">
+                        <span>Total:</span><span id="total-bill">0.00 £</span>
+                    </div>
+                    <button class="btn btn-success w-100 mt-3" onclick="confirmOrder()">Confirm Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
